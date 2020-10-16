@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title></title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+        #search{
+        border: 0;
+        width: 160px;
+        height: 32px;
+        background: rgb(29, 50, 110);
+        color: white;
+        border-radius:  5px;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+            /* line-height: 32px; */
+
+        }
+        #search:hover{
+            background: rgb(20,39,95);
+        }
+        #search:active{
+            background: rgb(15, 29, 71);
+            box-shadow: 0 0 3px rgb(29, 50, 110);
+        }
+
+        .input-long{
+            border:none;
+            outline:medium;
+            background-color: rgb(253, 253, 253);
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px rgb(204, 207, 221);
+        }
+        .input-long:focus{
+            box-shadow: 0 0 5px rgb(158, 162, 182);
+        }
+        .main{
+            background-color:  rgb(244, 244, 248);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        hr {
+            /* max-width: 720px; */
+            size: 3px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/static/assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="/static/assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body">
+                    <!-- Text -->
+                    <p class="text-sm text-white mb-3">
+                        We use cookies so that our themes work for you. By using our website, you agree to our use of cookies.
+                    </p>
+                    <!-- Buttons -->
+                    <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="../Home">
+                 <b>Synthesis Navigator</b>
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../hms">HMS</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="docs/index.html">Docs</a>
+                    </li>
+                </ul>
+                <!-- Button -->
+                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="">
+                    Git Hub
+                </a>
+                <!-- Mobile button -->
+                <div class="d-lg-none text-center">
+                    <a href="https://webpixels.io/themes/quick-website-ui-kit" class="btn btn-block btn-sm btn-warning">See more details</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section class="slice py-7">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                    <!-- Image -->
+                    <figure class="w-100">
+                        <img alt="Image placeholder" src="/static/assets/img/svg/illustrations/hms.svg" class="img-fluid mw-md-120">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                    <!-- Heading -->
+                    <h1 class="display-4 text-center text-md-left mb-3">
+                        	Make a little bit modification and see what will happen in the engineered organism
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-center text-md-left text-muted">
+                        When the pathway design is completed, we often need to introduce the exogenous pathway to the original metabolic network. Hybrid Metabolic Simulation is an expert in predicting what will be changed in the process.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-bottom">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+
+        <hr />
+
+        <div class="container main">
+            <h1>HMS(Hybrid Metabolic Simulation)</h1>
+            <form action="/HMS" method="get">
+                <div id="canshu">
+                    <label style="font-size:18px;color:rgb(0, 0, 0)">Observation list: </label>
+                    <input class="input-long" type="text" name="observation_list" value='{{observation_list}}' placeholder="input the compounds you want to observe,using';'to separate" style="width: 700px">
+                    <br/>
+                    <p></p>
+                    <label style="font-size:18px;color:rgb(0, 0, 0)">Delete reactions: </label>
+                    <input class="input-long" type="text" name="reaction_deficient" value='{{reaction_deficient}}' placeholder="input the reactions you want to delete,using';'to separate" style="width: 700px">
+                    <p></p>
+                </div>
+                <div id="morencanshu">
+                    <label style="font-size:18px;color:rgb(0, 0, 0)" >default value: </label>
+                    <input class="input-long" type="text" name="default_value" value='{{default_value}}' placeholder="The default value of compounds" style="width: 300px">
+                    <label style="font-size:18px;color:rgb(0, 0, 0)">&nbsp&nbspdefault epoches: </label>
+                    <input class="input-long" type="text" name="default_epoches" value='{{default_epoches}}' placeholder="The default number of run" style="width: 300px">
+                    <p></p>
+                </div>
+                <div id="specified value">
+                    <label style="font-size:18px;color:rgb(0, 0, 0)">The specified value of compounds: </label>
+                    <br/>
+                    <input class="input-long" type="text" name="specified_value" value='{{specified_value}}'  placeholder="input like C00001: 100000, C00002: 100000, C00003: 100000 using 'compound : value' as input" style="width: 820px">
+                </div>
+                <div id="runhms" >
+                    <br/>
+                    <button type="submit" id="search">RUN HMS</button>
+                </div>
+            </form>
+            {% if messages %}
+            <script>
+                {% for msg in messages %}
+                alert('{{ msg.message }}');
+                {% endfor %}
+            </script>
+            {% endif %} 
+        </div>
+
+
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+
+
+        <hr />
+
+        <div class="container">
+            <span class="badge badge-primary badge-pill">Overview</span>
+            <div class="row mt-4">
+                <div class="col-lg-6 pr-lg-5">
+                    <p class="h5 lh-180 mb-3">
+                    HMS (Hybrid Metabolic Simulation) is a good tool to simulate the modified metabolic network according to what users submit. To build a more robust, less data-dependent and more detailed Metabolism Simulation, our team build four models to deal with the reactions which are documented differently.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead lh-180">
+                       Users need to input the changes in the metabolic network and then our software will generate a list of the top 100 compounds whose content in the cell has changed greatly and a heat map to describe the changes of compound content. Once you find the pathway doesn’t go as what you have expected, you can make some optimization to your original pathway.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="position-relative" id="footer-main">
+        <div class="footer pt-lg-7 footer-dark bg-dark">
+            <!-- SVG shape -->
+
+            <!-- Footer -->
+            <div class="container pt-4">
+
+                <hr class="divider divider-fade divider-dark my-4">
+                <div class="row align-items-center justify-content-md-between pb-4">
+                    <div class="col-md-6">
+                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                            Copyright &copy; 2020.Tongji_Software All rights reserved.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Cookies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core JS  -->
+    <script src="/static/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="/static/assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- Quick JS -->
+    <script src="/static/assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>

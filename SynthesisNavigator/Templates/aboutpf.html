@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title></title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+
+
+        #box{
+                /* width: 480px; */
+                margin: 20px 0;
+                font-family: 'Microsoft YaHei';
+                font-size: 14px;
+        }
+        #box2{
+                /* width: 480px; */
+                margin: 20px 0;
+                margin-bottom: 10px;
+                font-family: 'Microsoft YaHei';
+                font-size: 14px;
+        }
+        #box3{
+                /* width: 480px; */
+                margin: 20px 0;
+                margin-bottom: 10px;
+                font-family: 'Microsoft YaHei';
+                font-size: 14px;
+        }
+        #search{
+        border: 0;
+        width: 100px;
+        height: 36px;
+        border-radius:  5px;
+        background: rgb(29, 50, 110);
+        color: white;
+        text-align: center;
+        line-height: 14px;
+        cursor: pointer;
+            line-height: 14px;
+
+        }
+        #search:hover{
+            background: rgb(20,39,95);
+        }
+        #reverse:active{
+            background: rgb(15, 29, 71);
+            box-shadow: 0 0 3px rgb(29, 50, 110);
+        }
+        #reverse{
+        border: 0;
+        width: 100px;
+        height: 36px;
+        border-radius:  5px;
+        background: rgb(29, 50, 110);
+        color: white;
+        text-align: center;
+        line-height: 14px;
+        cursor: pointer;
+            line-height: 14px;
+
+        }
+        #reverse:hover{
+            background: rgb(20,39,95);
+        }
+        #search:active{
+            background: rgb(15, 29, 71);
+            box-shadow: 0 0 3px rgb(29, 50, 110);
+        }
+
+/* 
+        #reverse{
+        border: 0;
+        width: 78px;
+        height: 28px;
+        margin-left: 10%;
+        border-radius: 5px;
+        background: rgb(158, 162, 182);
+        color: white;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        }
+        #reverse:hover{
+            background: rgb(219, 193, 141);
+        }
+        #reverse:active{
+            background: rgb(196, 166, 102);
+            box-shadow: 0 0 3px rgb(92, 77, 44);
+
+        } */
+        .input-box{
+            width: 60%;
+            background-color: rgb(228, 232, 241);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px rgb(204, 207, 221);
+        }
+        .inputtext{
+            border:none;
+            outline:medium;
+            width: 28%;
+            margin: 0 1%;
+            border-radius: 5px;
+            border-left: solid 1px rgb(218, 219, 228);
+            border-right: solid 1px rgb(218, 219, 228);
+        }
+        .inputtext:focus{
+            box-shadow: 0 0 5px rgb(158, 162, 182);
+        }
+        .main{
+            background-color:  rgb(244, 244, 248);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            /* max-width: 720px; */
+            size: 3px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="/static/assets/img/brand/favicon.png" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="/static/assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body">
+                    <!-- Text -->
+                    <p class="text-sm text-white mb-3">
+                        We use cookies so that our themes work for you. By using our website, you agree to our use of cookies.
+                    </p>
+                    <!-- Buttons -->
+                    <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="../Home">
+                 <b>Synthesis Navigator</b>
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../pf">Pathway Finder</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="docs/index.html">Docs</a>
+                    </li>
+                </ul>
+                <!-- Button -->
+                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="">
+                    Git Hub
+                </a>
+                <!-- Mobile button -->
+                <div class="d-lg-none text-center">
+                    <a href="https://webpixels.io/themes/quick-website-ui-kit" class="btn btn-block btn-sm btn-warning">See more details</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section class="slice py-7">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                    <!-- Image -->
+                    <figure class="w-100">
+                        <img alt="Image placeholder" src="/static/assets/img/svg/illustrations/pf.svg" class="img-fluid mw-md-120">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                    <!-- Heading -->
+                    <h1 class="display-4 text-center text-md-left mb-3">
+                        Tell  Pathway Finder what you want then it will generate the pathway that fits most
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-center text-md-left text-muted">
+                        You may be lost in the complicated metabolic network at the beginning. But don’t worry, Pathway Finder will guide the way.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="shape-container shape-line shape-position-bottom">
+            <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class="">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+    <hr />
+        <div class="container main">
+            <h1>Pathway Finder</h1>
+            <h2>1. Search form start compound to the target</h2>
+            <h4>input start and end compound</h4>
+            <form action="/PF" method="get" id='form1' name="search">
+                <div class="input-box" id="box">
+                    <input class="inputtext" type="search" name="start" value='{{start}}' placeholder="start compound">
+                <input class="inputtext" type="search" name="end" value='{{end}}' placeholder="end compound">
+
+                </div>
+                <h4>set your  weight of the pathway ranking, including KM(Michaelis constant), KKM(Kcat/Km), toxicity, PH and tempreature</h4>
+                <div class="input-box" id="box2">
+                    <input class="inputtext" type="text" name="km" value='{{km}}' placeholder="km">
+                    <input class="inputtext" type="text" name="kkm" value='{{kkm}}' placeholder="kkm">
+                    <input class="inputtext" type="text" name="toxi" value='{{toxi}}' placeholder="toxicity">
+                    <p></p>
+                    <input class="inputtext" type="text" name="PH" value='{{PH}}' placeholder="PH">
+                    <input class="inputtext" type="text" name="tem" value='{{tem}}' placeholder="tempreature">
+                </div>
+                <div  > <!--style="text-align:center"-->
+                    <button type="button" id="search" onclick="searchAction()" style="text-align: center">Search</button>
+                    <p></p>
+                    <p>&nbsp</p>
+                </div>
+            </form>
+            {% if messages %}
+            <script>
+                {% for msg in messages %}
+                alert('{{ msg.message }}');
+                {% endfor %}
+            </script>
+            {% endif %} 
+
+            <form action="/PFR" method="get" id='form2' name="reverse">
+                <h2>2. Reverse Search from the end compound </h2>
+                <div class="input-box" id="box3">
+                    <input class="inputtext" type="search" name="reverse" value='{{reverse}}' placeholder="target compound">
+                     <input class="inputtext" type="search" name="steps" value='{{steps}}' placeholder="Searching steps">
+                </div>
+                <div  > <!--style="text-align:center"-->
+                    <button type="button" id="reverse" onclick="researchAction()" style="text-align: center">Search</button>
+                    <p></p>
+                    <p>&nbsp</p>
+                </div>
+            </form>
+            {% if messages %}
+            <script>
+                {% for msg in messages %}
+                alert('{{ msg.message }}');
+                {% endfor %}
+            </script>
+            {% endif %}  
+
+        </div>
+        
+        <hr />
+        <div class="container">
+            <span class="badge badge-primary badge-pill">Overview</span>
+            <div class="row mt-4">
+                <div class="col-lg-6 pr-lg-5">
+                    <p class="h5 lh-180 mb-3">
+                   Pathway Finder, a multifunctional platform for pathway construction, can assist synthetic biologists to find out the best routes in the ocean of metabolic reactions. Pathway Finder takes the Synthetic Bay as the data source and selects a heuristic algorithm——A* to make sure that this platform can provide the most accurate result in a short time. Thermodynamic feasibility, competition of heterogeneous reactions and toxicity of intermediate products have been taken as the important scoring items to optimize the pathways.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead lh-180">
+                       Users just need to input the staring compound, target compound and weights of every index then Pathway Finder will search out the best several pathways and generate a report for you to download. Especially, Pathway Finder will provide the most suitable enzymes according to their physical and chemical properties including T, pH, Km and so on. Moreover, We add a new practical function ——reverse search to help find out all the compounds which can be transformed into the given target compound.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="position-relative" id="footer-main">
+        <div class="footer pt-lg-7 footer-dark bg-dark">
+            <!-- SVG shape -->
+
+            <!-- Footer -->
+            <div class="container pt-4">
+
+                <hr class="divider divider-fade divider-dark my-4">
+                <div class="row align-items-center justify-content-md-between pb-4">
+                    <div class="col-md-6">
+                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                            Copyright &copy; 2020.Tongji_Software All rights reserved.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Cookies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core JS  -->
+    <script src="/static/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="/static/assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- Quick JS -->
+    <script src="/static/assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+    <script type="text/javascript">
+        function researchAction(){
+            document.reverse.action="/PFR";
+            document.reverse.submit();
+        }
+        
+        function searchAction(){
+            document.search.action="/PF";
+            document.search.submit();
+        }
+    </script>
+
+</body>
+
+</html>
