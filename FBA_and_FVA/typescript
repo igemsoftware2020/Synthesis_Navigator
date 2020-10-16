@@ -1,177 +1,0 @@
-Script started on 2020-05-12 01:36:59-04:00
-[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..M/FBA_and_FVA[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA[00m [37m[1:36:59] 
-[1m[31m$ [00m[K[?1h=[?2004ht
-[A[0m[27m[24m[2Ct[K[32mtr
-[J[0mtr                   tracepath6           tracker              TRAPQUIT             trial                truncate             TRY_BLOCK_ERROR                                            
-trace-cmd            traceroute           trap                 tred                 troff                trust                TRY_BLOCK_INTERRUPT                                        
-[Jtracepath            [Jtraceroute6          [JTRAPINT              [Jtree                 [Jtrue                 [Jtry_alias_value      [J                                                         [3A[0m[27m[24m[2Ctr[K[32me
-[J[J[0mtred  [Jtree[J[A[0m[27m[24m[2Ctre[Ke
-[J[A[0m[27m[24m[2Ctree[K[32m [32mt[32mr[32me[32me[39m[?1l>[?2004l
-[J[39m]2;tree]1;tree[01;34m.[0m
-├── 25FV47.SIF
-├── [01;34mDATA[0m
-│   ├── e_coli_core.json
-│   └── iAF1260.json
-├── [01;34mLOG[0m
-├── [01;34mMOD[0m
-├── [01;34mSCRIPTS[0m
-│   ├── [01;32mcleanup.sh[0m
-│   ├── genModFBA.py
-│   ├── genModFVA_all_async.py
-│   ├── genModFVA_all_plain.py
-│   ├── nohup.out
-│   └── [01;32mrun_fva.sh[0m
-├── [01;34mSOL[0m
-└── typescript
-
-5 directories, 10 files
-[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..M/FBA_and_FVA[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA[00m [37m[1:37:02] 
-[1m[31m$ [00m[K[?1h=[?2004hc
-[A[0m[27m[24m[2Cc[K[32mcd
-[J[0mcd                 cd-create-profile  cd-drive           cd-iccdump         cd-it8             cdpath             cd-read                                                               
-[Jcd-convert         [Jcdda-player        [Jcd-fix-profile     [Jcd-info            [Jcd-paranoia        [JCDPATH             [J                                                                    [A[A[0m[27m[24m[2Ccd[K[32mc[32md[39m [32mS
-[J[J[01;34mSCRIPTS[0m/  [J[01;34mSOL[0m/    [J[A[0m[27m[24m[2C[32mcd[39m S[KC
-[J[A[0m[27m[24m[2C[32mcd[39m SC[K[32mRIPTS/[6C
-[J[A[0m[27m[24m[2C[32mcd[39m SCRIPTS/[K[11D[39mc[39md[9C[11D[32mc[32md[39m [4mS[4mC[4mR[4mI[4mP[4mT[4mS[4m/[24m[?1l>[?2004l
-[J[39m]2;cd SCRIPTS/]1;cd[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..d_FVA/SCRIPTS[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA/SCRIPTS[00m [37m[1:37:05] 
-[1m[31m$ [00m[K[?1h=[?2004hp
-[A[0m[27m[24m[2Cp[Kpy
-[Jtoo many matches.[A[0m[27m[24m[2Cpy[K[32m[32mt
-[J[0mpytest                                        python3                                       python3.8-config                              pythonsh                                    
-python                                        python3.6                                     python3-config                                                                            
-python2                                       python3.6m                                    python-argcomplete-check-easy-install-script                                              
-[Jpython2.7                                     [Jpython3.8                                     [Jpython-argcomplete-tcsh                       [J                                            [4A[0m[27m[24m[2Cpyt[K[32m
-[J[A[5Chon[32m[1C[32m[1C
-[J[0mpython                                        python3                                       python3.8                                     python-argcomplete-check-easy-install-script
-python2                                       python3.6                                     python3.8-config                              python-argcomplete-tcsh                     
-[Jpython2.7                                     [Jpython3.6m                                    [Jpython3-config                                [Jpythonsh                                    [J[3A[0m[27m[24m[2Cpython[K[32mp[32my[32mt[32mh[32mo[32mn[39m 
-[J[A[9C[4mgenModFVA_all_async.py[24m [?1l>[?2004l
-[J[39m]2;python genModFVA_all_async.py]1;pythonGenerating scripts for glpk...
-Done!
-Time cost:56.98 s
-[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..d_FVA/SCRIPTS[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA/SCRIPTS[00m [37m[1:38:08] 
-[1m[31m$ [00m[K[?1h=[?2004h.
-[A[0m[27m[24m[2C.[K[32m./
-[J[J[01;32mcleanup.sh[0m*  [J[01;32mrun_fva.sh[0m*[J[A[0m[27m[24m[2C./[Kr
-[J[A[0m[27m[24m[2C./r[K[32mun_fva.sh [10D[1C        [8D
-[J[A[0m[27m[24m[2C./ru[K[32mn_fva.sh [9D[1C       
-[J[A[0m[27m[24m[2C./run[K[32m_fva.sh [8D[8C
-[J[J[01;32mcleanup.sh[0m*             [JgenModFBA.py            [JgenModFVA_all_async.py  [JgenModFVA_all_plain.py  [Jnohup.out               [J[01;32mrun_fva.sh[0m*           [J[A[0m[27m[24m[2C./run_fva.sh[K[1C[13D[32m.[32m/[32mr[32mu[32mn[32m_[32mf[32mv[32ma[32m.[32ms[32mh[39m[1C[?1l>[?2004l
-[J[39m]2;./run_fva.sh]1;./run_fva.shStrated running FVA with glpk...
-Time cost: 23.5289 s
-Done!
-[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..d_FVA/SCRIPTS[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA/SCRIPTS[00m [37m[1:38:36] 
-[1m[31m$ [00m[K[?1h=[?2004hl
-[A[0m[27m[24m[2Cl[K[32mle
-[J[J[0mledctl       [Jledmon       [Jlefty        [Jless         [JLESS         [Jlessecho     [Jlesskey      [JLESSOPEN     [Jlesspipe.sh  [Jlet          [Jlex          [Jlexgrog    [J[A[0m[27m[24m[2Cle[K[32m
-[J[A[4Css[32m[1C
-[J[J[0mless         [JLESS         [Jlessecho     [Jlesskey      [JLESSOPEN     [Jlesspipe.sh[J[A[0m[27m[24m[2Cless[K[32ml[32me[32ms[32ms[39m 
-[J[A[7C[4m../SOL/LP_ATPM_maximize.sol[24m [?1l>[?2004l
-[J[39m]2;less ../SOL/LP_ATPM_maximize.sol]1;less[?1049h[22;0;0t[?1h=Problem:    LP_ATPM_maximize[m
-Rows:       1670[m
-Columns:    2382[m
-Non-zeros:  9233[m
-Status:     OPTIMAL[m
-Objective:  z = 8.39 (MAXimum)[m
-[m
-   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal[m
------- ------------ -- ------------- ------------- ------------- -------------[m
-     1 z            B           8.39                             [m
-     2 con          NL       0.66303       0.66303                       < eps[m
-     3 v2agpg161_c  NS             0            -0             =         < eps[m
-     4 v2agpg161_p  NS             0            -0             =         < eps[m
-     5 v2agpg180_c  NS             0            -0             =         < eps[m
-     6 v2agpg180_p  NS             0            -0             =         < eps[m
-     7 v2agpg181_c  NS             0            -0             =         < eps[m
-     8 v2agpg181_p  NS             0            -0             =         < eps[m
-     9 v2ahbut_c    NS             0            -0             =         < eps[m
-    10 v2amsa_c     NS             0            -0             =         < eps[m
-    11 v2aobut_c    NS             0            -0             =         < eps[m
-    12 v2cpr5p_c    NS             0            -0             =         < eps[m
-    13 v2dda7p_c    NS             0            -0             =         < eps[m
-    14 v2ddecg3p_c  NS             0            -0             =         < eps[m
-    15 v2ddecg3p_p  NS             0            -0             =         < eps[m
-    16 v2ddg6p_c    NS             0            -0             =         < eps[m
-    17 v2ddglcn_c   NS             0            -0             =         < eps[m
-    18 v2ddglcn_e   NS             0            -0             =         < eps[m
-    19 v2ddglcn_p   NS             0            -0             =         < eps[m
-    20 v2dh3dgal6p_c[m
-                    NS             0            -0             =         < eps[m
-    21 v2dh3dgal_c  NS             0            -0             =         < eps[m
-    22 v2dhglcn_c   B              0            -0             = [m
-    23 v12dgr181_c  NS             0            -0             =         < eps[m
-    24 v10fthf_c    NS             0            -0             =         < eps[m
-    25 v2dhguln_c   B              0            -0             = [m
-    26 v12dgr120_c  NS             0            -0             =         < eps[m
-    27 v2dhp_c      NS             0            -0             =         < eps[m
-    28 v12dgr181_p  NS             0            -0             =         < eps[m
-    29 v2dmmq8_c    NS             0            -0             =         < eps[m
-    30 v12ppd__R_c  NS             0            -0             =         < eps[m
-    31 v2dmmql8_c   B              0            -0             = [m
-    32 v12dgr120_p  NS             0            -0             =         < eps[m
-    33 v2dr1p_c     NS             0            -0             =         < eps[m
-    34 v12dgr140_c  NS             0            -0             =         < eps[m
-    35 v12dgr140_p  NS             0            -0             =         < eps[m
-    36 v12ppd__R_e  NS             0            -0             =         < eps[m
-    37 v2dr5p_c     NS             0            -0             =         < eps[m
-    38 v12ppd__R_p  NS             0            -0             =         < eps[m
-    39 v12dgr141_c  NS             0            -0             =         < eps[m
-[7m../SOL/LP_ATPM_maximize.sol[27m[K[K[?1l>[?1049l[23;0;0t[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..d_FVA/SCRIPTS[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA/SCRIPTS[00m [37m[1:38:49] 
-[1m[31m$ [00m[K[?1h=[?2004hh
-[A[0m[27m[24m[2Ch[K[32mhe
-[J[J[0mhead     [Jhex2hcd  [Jhexdump[J[A[0m[27m[24m[2Che[Ka
-[J[A[0m[27m[24m[2Chea[K[32md [1C
-[J[A[0m[27m[24m[2Chead[K[32m [32mh[32me[32ma[32md[39m  [39m.[39m [39m [39m 
-[J[A[A[0m[27m[24m[2C..[K[32m[32m/
-[J[J[01;34mDATA[0m/     [J[01;34mLOG[0m/      [J[01;34mMOD[0m/      [J[01;34mSCRIPTS[0m/  [J[01;34mSOL[0m/    [J[A[0m[27m[24m[2C../[K[32mS
-[J[J[01;34mSCRIPTS[0m/  [J[01;34mSOL[0m/    [J[A[0m[27m[24m[2C../S[KO
-[J[A[0m[27m[24m[2C../SO[K[32mL
-[J[A[0m[27m[24m[2C../SOL[K[32m/
-[Jtoo many matches.[A[0m[27m[24m[2C../SOL/[K[32mL
-[Jtoo many matches.[A[0m[27m[24m[2C../SOL/L[K[32mP
-[Jtoo many matches.[A[0m[27m[24m[2C../SOL/LP[K[32m_
-[Jtoo many matches.[A[0m[27m[24m[2C../SOL/LP_[K[32mA
-[Jtoo many matches.[A[0m[27m[24m[2C../SOL/LP_A[K[32m[32mT
-[J[0mLP_ATHRDHr_maximize.sol   LP_ATPHs_maximize.sol     LP_ATPM_maximize.sol      LP_ATPPRT_maximize.sol    LP_ATPS4rpp_maximize.sol                                                  
-[JLP_ATHRDHr_minimize.sol   [JLP_ATPHs_minimize.sol     [JLP_ATPM_minimize.sol      [JLP_ATPPRT_minimize.sol    [JLP_ATPS4rpp_minimize.sol  [J                                                [A[A[0m[27m[24m[2C../SOL/LP_AT[K[32mP
-[J[0mLP_ATPHs_maximize.sol     LP_ATPM_maximize.sol      LP_ATPPRT_maximize.sol    LP_ATPS4rpp_maximize.sol                                                                          
-[JLP_ATPHs_minimize.sol     [JLP_ATPM_minimize.sol      [JLP_ATPPRT_minimize.sol    [JLP_ATPS4rpp_minimize.sol  [J                                                                        [A[A[0m[27m[24m[2C../SOL/LP_ATP[K[32m[32m[32m
-[J[A[15CM_m
-[J[J[0mLP_ATPM_maximize.sol  [JLP_ATPM_minimize.sol[J[A[0m[27m[24m[2C../SOL/LP_ATPM_m[Ka
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_ma[K[32mx
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_max[K[32mi
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maxi[K[32mm
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maxim[K[32mi
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximi[K[32mz
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximiz[K[32me
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximize[K[32m.
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximize.[K[32ms
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximize.s[K[32mo
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximize.so[K[32ml
-[J[A[0m[27m[24m[2C../SOL/LP_ATPM_maximize.sol[K[32m[27Dhead [7m.[7m.[7m/[7mS[7mO[7mL[7m/[7mL[7mP[7m_[7mA[7mT[7mP[7mM[7m_[7mm[7ma[7mx[7mi[7mm[7mi[7mz[7me.sol [27m [33D[32mh[32me[32ma[32md[39m [27m[4m.[27m[4m.[27m[4m/[27m[4mS[27m[4mO[27m[4mL[27m[4m/[27m[4mL[27m[4mP[27m[4m_[27m[4mA[27m[4mT[27m[4mP[27m[4mM[27m[4m_[27m[4mm[27m[4ma[27m[4mx[27m[4mi[27m[4mm[27m[4mi[27m[4mz[27m[4me[27m[4m.[27m[4ms[27m[4mo[27m[4ml[24m[27m 
-[J[A[0m[27m[24m[2C[32mhead[39m [4m../SOL/LP_ATPM_maximize.sol[24m[K[32m[27D[24m.[24m.[24m/[24mS[24mO[24mL[24m/[24mL[24mP[24m_[24mA[24mT[24mP[24mM[24m_[24mm[24ma[24mx[24mi[24mm[24mi[24mz[24me[24m.[24ms[24mo[24ml  [27D[4m.[4m.[4m/[4mS[4mO[4mL[4m/[4mL[4mP[4m_[4mA[4mT[4mP[4mM[4m_[4mm[4ma[4mx[4mi[4mm[4mi[4mz[4me[4m.[4ms[4mo[4ml[24m[?1l>[?2004l
-[J[39m]2;head ../SOL/LP_ATPM_maximize.sol]1;headProblem:    LP_ATPM_maximize
-Rows:       1670
-Columns:    2382
-Non-zeros:  9233
-Status:     OPTIMAL
-Objective:  z = 8.39 (MAXimum)
-
-   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
------- ------------ -- ------------- ------------- ------------- -------------
-     1 z            B           8.39                             
-[1m[7m%[27m[1m[0m                                                                                                                                                                                              ]2;john@192:]1;..d_FVA/SCRIPTS[0m[27m[24m[J
-[1m[34m#[00m [36mjohn [37m@ [32m192 [37min [1m[33m~/Others/iGEM/FBA_and_FVA/SCRIPTS[00m [37m[1:39:31] 
-[1m[31m$ [00m[K[?1h=[?2004h.
-[A[0m[27m[24m[2C.[K[32m./
-[J[J[01;32mcleanup.sh[0m*  [J[01;32mrun_fva.sh[0m*[J[A[0m[27m[24m[2C./[K[32m.[39m 
-[J[A[0m[27m[24m[2C[32m.[39m[K[39m 
-[J[A[0m[27m[24m[2C[K[?2004l
-[J
-Script done on 2020-05-12 01:39:41-04:00
