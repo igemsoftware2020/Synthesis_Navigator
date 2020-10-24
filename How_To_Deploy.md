@@ -30,7 +30,7 @@ Build docker image.
 
 ```
 cd Synthesis_Navigator-master/
-docker build -t TongjiSoftware/Synthesis_Navigator:1.0 .
+docker build -t tongji_software/synthesis_navigator:1.0 .
 ```
 
 ### STEP IV
@@ -38,7 +38,7 @@ docker build -t TongjiSoftware/Synthesis_Navigator:1.0 .
 Run the container.
 
 ```
-docker run -it --rm -p 8000:8000 TongjiSoftware/Synthesis_Navigator:1.0 
+docker run -it --rm -p 8000:8000 tongji_software/synthesis_navigator:1.0 
 ```
 
 ### STEP V
