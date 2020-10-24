@@ -43,6 +43,6 @@ docker run -it --rm -p 8000:8000 TongjiSoftware/Synthesis_Navigator:1.0
 
 ### STEP V
 
-Open 127.0.0.1/Home in your browser (Chrome is recommended).Enjoy:)
+Open http://127.0.0.1:8000/Home in your browser (Chrome is recommended).Enjoy:)
 
 You can modify settings.py to suit your environment.
