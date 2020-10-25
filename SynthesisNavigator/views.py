@@ -28,7 +28,7 @@ def DataBase(request):
 def DBS(request):
     '''
     '''
-    """
+    
     info = SqLiteConnect.select('COMPOUND')
     with open('statics/data_download/Compound.csv','w') as write_object:
         write_object.write('cid,name,formula,smile,toxicity,weight,sdf\n')
@@ -44,7 +44,7 @@ def DBS(request):
         write_object.write('pid,name,ecnum,organism,localization,ph,phr,t,tr,km,kkm,sequence\n')
         for value in info:
             write_object.write('{},{},{},{},{},{},{},{},{},{},{},{}\n'.format(value[0],value[2],value[1],value[3],value[4],value[5],value[6],value[7],value[8],value[9],value[10],value[13]))
-    """
+    
     return render(request,'download.html',{'file1':'Compound.csv','file2':'Reaction.csv','file3':'Enzyme.csv','file4':'SyntheticBay.db'})
 
 def HMS(request):
@@ -146,7 +146,7 @@ def HMS(request):
     for compound in observation_list:
         try:a = models.Compound.objects.get(cid=compound)
         except:
-            messages.error(request,'Sorry but Not Found the compound! please input like C00051!')
+            messages.error(request,'Sorry but Not Found the compound '+compound+' ! please input like C00051!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -156,7 +156,7 @@ def HMS(request):
     for reaction in reaction_deficient:
         try:a = models.Reaction.objects.get(rid=reaction)
         except:
-            messages.error(request,'Sorry but Not Found the reaction! please input like R00112!')
+            messages.error(request,'Sorry but Not Found the reaction '+reaction+' ! please input like R00112!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -168,7 +168,7 @@ def HMS(request):
     for key,value in specified_value.items():
         try:a = models.Compound.objects.get(cid=key)
         except:
-            messages.error(request,'Sorry but Not Found the compound! please input like C00051!')
+            messages.error(request,'Sorry but Not Found the compound '+key+' ! please input like C00051!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -287,7 +287,7 @@ def HMS(request):
     text = 'Annotation:'
     story.append(Paragraph(text,styles["mytitle"]))
     story.append(Spacer(240, 20))
-    text = '''  we output the compound you want to observe, and the top50 compound which altered and ordered by alter number(delta).
+    text = '''  we output the compound you want to observe, and the top100 compound which altered and ordered by alter number(delta).
         the output features are compound id, compound name, the Final state value, altered value and normalized altered value from left to right.
         if you want to get all results, please download the .csv file!'''
     story.append(Paragraph(text,styles["annotation_txt"]))

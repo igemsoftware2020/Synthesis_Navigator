@@ -1,0 +1,5 @@
+db.sqlite3
+static/data_download/Compound.csv
+static/data_download/Enzyme.csv
+static/data_download/Reaction.csv
+static/data_download/SyntheticBay.db
