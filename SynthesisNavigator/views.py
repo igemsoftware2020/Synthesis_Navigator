@@ -30,17 +30,17 @@ def DBS(request):
     '''
     
     info = SqLiteConnect.select('COMPOUND')
-    with open('statics/data_download/Compound.csv','w') as write_object:
+    with open('static/data_download/Compound.csv','w') as write_object:
         write_object.write('cid,name,formula,smile,toxicity,weight,sdf\n')
         for value in info:
             write_object.write('{},{},{},{},{},{},{}\n'.format(value[0],value[1],value[2],value[3],value[4],value[5],value[6]))
     info = SqLiteConnect.select('REACTION')
-    with open('statics/data_download/Reaction.csv','w') as write_object:
+    with open('static/data_download/Reaction.csv','w') as write_object:
         write_object.write('rid,ecnum,equation,reactionclass,energy,frequency\n')
         for value in info:
             write_object.write('{},{},{},{},{},{}\n'.format(value[0],value[2],value[1],value[3],value[4],value[5]))
     info = SqLiteConnect.select('ENZYME')
-    with open('statics/data_download/Enzyme.csv','w') as write_object:
+    with open('static/data_download/Enzyme.csv','w') as write_object:
         write_object.write('pid,name,ecnum,organism,localization,ph,phr,t,tr,km,kkm,sequence\n')
         for value in info:
             write_object.write('{},{},{},{},{},{},{},{},{},{},{},{}\n'.format(value[0],value[2],value[1],value[3],value[4],value[5],value[6],value[7],value[8],value[9],value[10],value[13]))
