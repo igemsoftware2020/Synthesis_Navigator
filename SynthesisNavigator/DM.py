@@ -110,7 +110,7 @@ def matrix2json(reaction_deficient,compound_deficient):
     jsontext['STAT']['metabolic_frequency'] = metabolic_frequency
 
     jsondata = json.dumps(jsontext,indent=4,separators=(',', ': '))
-    write_object = open('statics/complex_data.json','w')
+    write_object = open('static/complex_data.json','w')
     write_object.write(jsondata)
     write_object.close()
     return True
