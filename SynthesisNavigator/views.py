@@ -64,7 +64,7 @@ def HMS(request):
     '''
     设定初始状态
     '''
-    with open('statics/initial_state.txt') as read_objects:
+    with open('static/initial_state.txt') as read_objects:
         for line in read_objects:
             specified_value[line.strip().split(',')[0]] = int(line.strip().split(',')[1])
     #读取网页表单
@@ -178,12 +178,12 @@ def HMS(request):
     #格式预加载
     matrix2json(reaction_deficient,[])
     json_txt=''
-    with open("statics/complex_data.json",'r') as load_f:
+    with open("static/complex_data.json",'r') as load_f:
         json_txt=load_f.read()
     
     #PDF格式设置
     story=[]
-    pdfmetrics.registerFont(TTFont('msyh', 'statics/msyh.ttf'))### 设置中文字体名称为msyh
+    pdfmetrics.registerFont(TTFont('msyh', 'static/msyh.ttf'))### 设置中文字体名称为msyh
     styles = getSampleStyleSheet()#获得reportlab预先设定的文本模板
     styles.add(ParagraphStyle(name='mytitle', leftIndent=-50,rightIndent=-50,alignment=TA_JUSTIFY,fontName="msyh",fontSize=24,textColor='#003153',bulletFontSize=12,
             bulletIndent=-50,bulletAnchor ='start',bulletFontName = 'Symbol' ))
@@ -258,7 +258,7 @@ def HMS(request):
             nor_delta = abs(round(delta/(default_value+0.0000001),5))
             RunSim_res[key]=(value,delta,nor_delta)
     time_text = str(datetime.date.today()).replace('-','_') +'_'+ str(time.time()).replace('.','')[8:-1]
-    with open('statics/data_download/randomwalk_res_'+time_text+'.csv','w') as write_object:
+    with open('static/data_download/randomwalk_res_'+time_text+'.csv','w') as write_object:
         write_object.write('compound,start_value,end_value,delta,normalize_delta\n')
         for key,value in RunSim_res.items():
             if key in specified_value.keys():
@@ -291,7 +291,7 @@ def HMS(request):
         the output features are compound id, compound name, the Final state value, altered value and normalized altered value from left to right.
         if you want to get all results, please download the .csv file!'''
     story.append(Paragraph(text,styles["annotation_txt"]))
-    doc = SimpleDocTemplate('statics/data_download/randomwalk_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
+    doc = SimpleDocTemplate('static/data_download/randomwalk_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
     doc.build(story)
     return render(request,'download.html',{'file1':'randomwalk_res_'+time_text+'.pdf','file2':'randomwalk_res_'+time_text+'.csv','file3':'','file4':''})
 
@@ -366,13 +366,13 @@ def PF(request):
         compound_deficient.remove(end_C)
     matrix2json([],compound_deficient=compound_deficient)
     json_txt=''
-    with open("statics/complex_data.json",'r') as load_f:
+    with open("static/complex_data.json",'r') as load_f:
         json_txt=load_f.read()
 
     reaction_list = []
     pathway_reaction = []
     story=[]
-    pdfmetrics.registerFont(TTFont('msyh', 'statics/msyh.ttf'))### 设置中文字体名称为msyh
+    pdfmetrics.registerFont(TTFont('msyh', 'static/msyh.ttf'))### 设置中文字体名称为msyh
     styles = getSampleStyleSheet()#获得reportlab预先设定的文本模板
     styles.add(ParagraphStyle(name='mytitle', leftIndent=-50,rightIndent=-50,alignment=TA_JUSTIFY,fontName="msyh",fontSize=24,textColor='#003153',bulletFontSize=12,
             bulletIndent=-50,bulletAnchor ='start',bulletFontName = 'Symbol' ))
@@ -420,7 +420,7 @@ def PF(request):
         story.append(Paragraph(text,styles["txt"]))
         story.append(Spacer(240, 10))
         time_text = str(datetime.date.today()).replace('-','_') +'_'+ str(time.time()).replace('.','')[8:-1]
-        doc = SimpleDocTemplate('statics/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
+        doc = SimpleDocTemplate('static/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
         doc.build(story)
         return render(request,'download.html',{'file1':'pathway_res_'+time_text+'.pdf','file2':'','file3':'','file4':''})
     Sear_res = sorted(Sear_res, key = lambda x:x[1],reverse=False)
@@ -461,7 +461,7 @@ def PF(request):
         story.append(Paragraph(text,styles["txt"]))
         story.append(Spacer(240, 10))
     time_text = str(datetime.date.today()).replace('-','_') +'_'+ str(time.time()).replace('.','')[8:-1]
-    doc = SimpleDocTemplate('statics/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
+    doc = SimpleDocTemplate('static/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
     doc.build(story)
     return render(request,'download.html',{'file1':'pathway_res_'+time_text+'.pdf','file2':'','file3':'','file4':''})
 
@@ -536,13 +536,13 @@ def PFR(request):
         compound_deficient.remove(end_C)
     matrix2json([],compound_deficient=compound_deficient)
     json_txt=''
-    with open("statics/complex_data.json",'r') as load_f:
+    with open("static/complex_data.json",'r') as load_f:
         json_txt=load_f.read()
 
     reaction_list = []
     pathway_reaction = []
     story=[]
-    pdfmetrics.registerFont(TTFont('msyh', 'statics/msyh.ttf'))### 设置中文字体名称为msyh
+    pdfmetrics.registerFont(TTFont('msyh', 'static/msyh.ttf'))### 设置中文字体名称为msyh
     styles = getSampleStyleSheet()#获得reportlab预先设定的文本模板
     styles.add(ParagraphStyle(name='mytitle', leftIndent=-50,rightIndent=-50,alignment=TA_JUSTIFY,fontName="msyh",fontSize=24,textColor='#003153',bulletFontSize=12,
             bulletIndent=-50,bulletAnchor ='start',bulletFontName = 'Symbol' ))
@@ -583,7 +583,7 @@ def PFR(request):
         story.append(Paragraph(text,styles["txt"]))
         story.append(Spacer(240, 10))
         time_text = str(datetime.date.today()).replace('-','_') +'_'+ str(time.time()).replace('.','')[8:-1]
-        doc = SimpleDocTemplate('statics/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
+        doc = SimpleDocTemplate('static/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
         doc.build(story)
         return render(request,'download.html',{'file1':'pathway_res_'+time_text+'.pdf','file2':'','file3':'','file4':''})
 
@@ -629,7 +629,7 @@ def PFR(request):
         story.append(Paragraph(text,styles["txt"]))
         story.append(Spacer(240, 10))
     time_text = str(datetime.date.today()).replace('-','_') +'_'+ str(time.time()).replace('.','')[8:-1]
-    doc = SimpleDocTemplate('statics/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
+    doc = SimpleDocTemplate('static/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
     doc.build(story)
     return render(request,'download.html',{'file1':'pathway_res_'+time_text+'.pdf','file2':'','file3':'','file4':''})
 
@@ -645,7 +645,7 @@ def file_down(request,path):  #文本下载
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     request.encoding = 'utf-8'
     name = path
-    filename = os.path.join(BASE_DIR,'statics/data_download/'+path) # 要下载的文件路径
+    filename = os.path.join(BASE_DIR,'static/data_download/'+path) # 要下载的文件路径
     # do something
     the_file_name = name
     if not os.path.isfile(filename):  # 判断下载文件是否存在
