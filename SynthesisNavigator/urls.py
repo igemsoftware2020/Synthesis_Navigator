@@ -24,6 +24,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Home/',views.Home),
+    path('',views.Home),
     path('database/',views.DataBase),
     path('hms/',views.HybridMetabolicSimulation),
     path('pf/',views.PathwayFinding),
