@@ -4,3 +4,4 @@ static/data_download/Enzyme.csv
 static/data_download/Reaction.csv
 static/data_download/SyntheticBay.db
 static/data_download/*.pdf
+nginx_statics/
