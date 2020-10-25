@@ -5,3 +5,4 @@ static/data_download/Reaction.csv
 static/data_download/SyntheticBay.db
 static/data_download/*.pdf
 nginx_statics/
+local_uwsgi.ini
