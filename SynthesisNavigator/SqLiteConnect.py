@@ -21,7 +21,7 @@ def main():
     
 
 def select(DatabaseName):
-    conn = sqlite3.connect('statics/data_download/SyntheticBay.db')
+    conn = sqlite3.connect('static/data_download/SyntheticBay.db')
     cur = conn.cursor()
     select_string = '''SELECT * FROM '''+DatabaseName+''';'''
     try:
