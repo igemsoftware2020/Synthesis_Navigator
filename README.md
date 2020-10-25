@@ -6,7 +6,7 @@
   
 ## 2. How to get starting in web
 
-&nbsp;&nbsp;&nbsp;&nbsp;These functions hosted on the web are divided into three main modules: Synthetic Bay (DB), Pathway Finder (PF), and Deep Metabolic Simulation (DMS).   
+&nbsp;&nbsp;&nbsp;&nbsp;Our functions hosted on the web are divided into three main modules: Synthetic Bay (DB), Pathway Finder (PF), and Deep Metabolic Simulation (DMS).   
 &nbsp;&nbsp;&nbsp;&nbsp;Through ‘www.tjigem.com’ or ‘https://www.tjigem.com’, we can enter the Home page of the project.  
 &nbsp;&nbsp;&nbsp;&nbsp;On this page, users can get our project’s leading content and this manual (Handbook) of the software. At the same time, they can enter the three functional pages by clicking the navigation card. If you want to get more details, read handbook.pdf please!  
 &nbsp;&nbsp;&nbsp;&nbsp;try 'www.tjigem.com/database', 'www.tjigem.com/PF', 'www.tjigem.com/HMS' to enter the functional pages.  
@@ -16,6 +16,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Meanwhile, you will find some alternative parameters to get more different results in our DMS code. You can choose better value or functions according to your demand.   
 &nbsp;&nbsp;&nbsp;&nbsp;we will instruct you how to deploy. More details, read How_To_Deploy.md please!  
 
-
+## 4. Know more about our project
+&nbsp;&nbsp;&nbsp;&nbsp;You can visit our wiki page to know more information about our team and project:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://2020.igem.org/Team:Tongji_Software
 
 
