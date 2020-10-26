@@ -14,7 +14,7 @@
 ## 3. How to build this project in your computer
  
 &nbsp;&nbsp;&nbsp;&nbsp;Meanwhile, you will find some alternative parameters to get more different results in our DMS code. You can choose better value or functions according to your demand.   
-&nbsp;&nbsp;&nbsp;&nbsp;We will instruct you how to deploy. More details, read [How_To_Deploy.md](https://github.com/igemsoftware2020/Synthesis_Navigator/blob/master/How_To_Deploy.md) please!  
+&nbsp;&nbsp;&nbsp;&nbsp;If you are familiar with Docker, just build our software with the Dockerfile in our repo. We will instruct you how to deploy. For more details, read [How_To_Deploy.md](https://github.com/igemsoftware2020/Synthesis_Navigator/blob/master/How_To_Deploy.md) please!  
 
 ## 4. Know more about our project
 &nbsp;&nbsp;&nbsp;&nbsp;You can visit our wiki page to know more information about our team and project:  
