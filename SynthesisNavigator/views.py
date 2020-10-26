@@ -85,7 +85,7 @@ def HMS(request):
             try:
                 default_value = int(request.GET['default_value'].strip())
                 if default_value<0: 
-                    messages.warning(request,'please input the number >= 0!')
+                    messages.warning(request,'Please input the number >= 0!')
                     specified_value_text = ''
                     for key,value in specified_value.items():
                         specified_value_text+='{}:{},'.format(key,value)
@@ -93,7 +93,7 @@ def HMS(request):
                     return  render(request,'abouthms.html',info)
             except:
                 default_value = 100
-                messages.warning(request,'please input use number with type int!')
+                messages.warning(request,'Please input use number with type int!')
                 specified_value_text = ''
                 for key,value in specified_value.items():
                     specified_value_text+='{}:{},'.format(key,value)
@@ -109,7 +109,7 @@ def HMS(request):
                     epoches = 5000
             except:
                 epoches = 500
-                messages.warning(request,'please input use number with type int!')
+                messages.warning(request,'Please input use number with type int!')
                 specified_value_text = ''
                 for key,value in specified_value.items():
                     specified_value_text+='{}:{},'.format(key,value)
@@ -124,7 +124,7 @@ def HMS(request):
                 try:
                     comp_num = int(C_V.strip().split(':')[1].strip())
                     if comp_num<0: 
-                        messages.warning(request,'please input the number >= 0!')
+                        messages.warning(request,'Please input the number >= 0!')
                         specified_value_text = ''
                         for key,value in specified_value.items():
                             specified_value_text+='{}:{},'.format(key,value)
@@ -133,7 +133,7 @@ def HMS(request):
                     specified_value[comp] = comp_num
                 except:
                     specified_value[comp] = 100
-                    messages.warning(request,'please input use number with type int!')
+                    messages.warning(request,"Please follow the sample input, you may be input the wrong separator, a number non-int type or playing a trick on us!")
                     specified_value_text = ''
                     for key,value in specified_value.items():
                         specified_value_text+='{}:{},'.format(key,value)
@@ -146,7 +146,7 @@ def HMS(request):
     for compound in observation_list:
         try:a = models.Compound.objects.get(cid=compound)
         except:
-            messages.error(request,'Sorry but Not Found the compound '+compound+' ! please input like C00051!')
+            messages.error(request,'Sorry but Not Found the compound '+compound+'! Please input like C00051!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -156,7 +156,7 @@ def HMS(request):
     for reaction in reaction_deficient:
         try:a = models.Reaction.objects.get(rid=reaction)
         except:
-            messages.error(request,'Sorry but Not Found the reaction '+reaction+' ! please input like R00112!')
+            messages.error(request,'Sorry but Not Found the reaction '+reaction+'! Please input like R00112!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -168,7 +168,7 @@ def HMS(request):
     for key,value in specified_value.items():
         try:a = models.Compound.objects.get(cid=key)
         except:
-            messages.error(request,'Sorry but Not Found the compound '+key+' ! please input like C00051!')
+            messages.error(request,'Sorry but Not Found the compound '+key+'! Please input like C00051!')
             specified_value_text = ''
             for key,value in specified_value.items():
                 specified_value_text+='{}:{},'.format(key,value)
@@ -287,9 +287,9 @@ def HMS(request):
     text = 'Annotation:'
     story.append(Paragraph(text,styles["mytitle"]))
     story.append(Spacer(240, 20))
-    text = '''  we output the compound you want to observe, and the top100 compound which altered and ordered by alter number(delta).
-        the output features are compound id, compound name, the Final state value, altered value and normalized altered value from left to right.
-        if you want to get all results, please download the .csv file!'''
+    text = '''  We output the compound you want to observe, and the top100 compound which altered and ordered by alter number(delta).
+        The output features are compound id, compound name, the Final state value, altered value and normalized altered value from left to right.
+        If you want to get all results, please download the .csv file! '''
     story.append(Paragraph(text,styles["annotation_txt"]))
     doc = SimpleDocTemplate('static/data_download/randomwalk_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
     doc.build(story)
@@ -319,7 +319,7 @@ def PF(request):
             try:Controllable_Indi[0]=abs(float(request.GET['km'].strip()))
             except:
                 Controllable_Indi[0] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -327,7 +327,7 @@ def PF(request):
             try:Controllable_Indi[1]=abs(float(request.GET['kkm'].strip()))
             except:
                 Controllable_Indi[1] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -335,7 +335,7 @@ def PF(request):
             try:Controllable_Indi[2]=abs(float(request.GET['toxi'].strip()))
             except:
                 Controllable_Indi[2] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -343,7 +343,7 @@ def PF(request):
             try:Controllable_Indi[3]=abs(float(request.GET['PH'].strip()))
             except:
                 Controllable_Indi[3] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -351,7 +351,7 @@ def PF(request):
             try:Controllable_Indi[4]=abs(float(request.GET['tem'].strip()))
             except:
                 Controllable_Indi[4] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -379,7 +379,7 @@ def PF(request):
     styles.add(ParagraphStyle(name='txt', leftIndent=-50,rightIndent=-50,alignment=TA_JUSTIFY,fontName="msyh",fontSize=12,textColor='#003153',bulletFontSize=12,
             bulletIndent=-50,bulletAnchor ='start',bulletFontName = 'Symbol' ))           
         
-    text = '''<para><br/>PythwayFinder</para>'''
+    text = '''<para><br/>PathwayFinder</para>'''
     story.append(Paragraph(text,styles["title"])) #将text添加到list中，并且风格为txt
     story.append(Spacer(240, 10))
     text = 'Summary:'
@@ -403,13 +403,13 @@ def PF(request):
     try:
         a = models.Compound.objects.get(cid=start_C)
     except:
-        messages.error(request,'Sorry but Not Found the start compound '+start_C+' ! please input like C00051.')
+        messages.error(request,'Sorry but Not Found the start compound '+start_C+'! Please input like C00051.')
         info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
         return render(request,'aboutpf.html',info)
     try:
         a = models.Compound.objects.get(cid=end_C)
     except:
-        messages.error(request,'Sorry but Not Found the end compound '+end_C+' ! please input like C00051.')
+        messages.error(request,'Sorry but Not Found the end compound '+end_C+'! Please input like C00051.')
         info = {'start':start_C,'end':end_C,'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],}
         return render(request,'aboutpf.html',info)
     try:Sear_res = Sear.SimpleSaerch(start_C,end_C,pathway_nums=10)
@@ -482,7 +482,7 @@ def PFR(request):
             try:Controllable_Indi[0]=abs(float(request.GET['km'].strip()))
             except:
                 Controllable_Indi[0] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -490,7 +490,7 @@ def PFR(request):
             try:Controllable_Indi[1]=abs(float(request.GET['kkm'].strip()))
             except:
                 Controllable_Indi[1] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -498,7 +498,7 @@ def PFR(request):
             try:Controllable_Indi[2]=abs(float(request.GET['toxi'].strip()))
             except:
                 Controllable_Indi[2] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -506,7 +506,7 @@ def PFR(request):
             try:Controllable_Indi[3]=abs(float(request.GET['PH'].strip()))
             except:
                 Controllable_Indi[3] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -514,7 +514,7 @@ def PFR(request):
             try:Controllable_Indi[4]=abs(float(request.GET['tem'].strip()))
             except:
                 Controllable_Indi[4] = 0.2
-                messages.error(request,'please input use number with type float!')
+                messages.error(request,'Please input use number with type float!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -525,7 +525,7 @@ def PFR(request):
                     control_nums=4
             except:
                 control_nums = 4
-                messages.error(request,'please input use number with type int!')
+                messages.error(request,'Please input use number with type int!')
                 info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
                 return render(request,'aboutpf.html',info)
         else:pass
@@ -549,7 +549,7 @@ def PFR(request):
     styles.add(ParagraphStyle(name='txt', leftIndent=-50,rightIndent=-50,alignment=TA_JUSTIFY,fontName="msyh",fontSize=12,textColor='#003153',bulletFontSize=12,
             bulletIndent=-50,bulletAnchor ='start',bulletFontName = 'Symbol' )) 
         
-    text = '''<para><br/>PythwayFinder</para>'''
+    text = '''<para><br/>Pathway Finder</para>'''
     story.append(Paragraph(text,styles["title"])) #将text添加到list中，并且风格为txt
     story.append(Spacer(240, 10))
     text = 'Summary:'
@@ -573,11 +573,13 @@ def PFR(request):
     try:
         a = models.Compound.objects.get(cid=end_C)
     except:
-        messages.error(request,'Sorry but Not Found the compound '+end_C+' ! please input like C00051.')
+        messages.error(request,'Sorry but Not Found the compound '+end_C+'! Please input like C00051.')
         info = {'km':Controllable_Indi[0],'kkm':Controllable_Indi[1],'toxi':Controllable_Indi[2],'PH':Controllable_Indi[3],'tem':Controllable_Indi[4],'reverse':end_C,'steps':control_nums,}
         return render(request,'aboutpf.html',info)
     try:Sear_res = Sear.ReverseSaerch(end_C,nums=control_nums)
     except:Sear_res = []
+    for s in Sear_res:
+        if len(s[1])==1:Sear_res.remove(s)
     if Sear_res == []:
         text = 'No pathway between these two compounds!'
         story.append(Paragraph(text,styles["txt"]))
@@ -586,9 +588,6 @@ def PFR(request):
         doc = SimpleDocTemplate('static/data_download/pathway_res_'+time_text+'.pdf',topMargin = 15,bottomMargin = 15)
         doc.build(story)
         return render(request,'download.html',{'file1':'pathway_res_'+time_text+'.pdf','file2':'','file3':'','file4':''})
-
-    for s in Sear_res:
-        if len(s[1])==1:Sear_res.remove(s)
     #print(Sear_res)
     for pathway in Sear_res:
         for i in range(1,len(pathway[1]),2):
