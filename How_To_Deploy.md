@@ -45,4 +45,4 @@ docker run -it --rm -p 8000:8000 tongji_software/synthesis_navigator:1.0
 
 Open http://127.0.0.1:8000/Home in your browser (Chrome is recommended).Enjoy:)
 
-You can modify settings.py to suit your environment. Also, uwsgi.ini is provided for deployment in production environment to work together with web servers like Nginx.
+You can modify settings.py to suit your environment. Also, ***uwsgi.ini*** is provided for deployment in production environment to work together with web servers like Nginx.
