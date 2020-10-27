@@ -8,7 +8,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Our functions hosted on the web are divided into three main modules: Synthetic Bay (DB), Pathway Finder (PF), and Deep Metabolic Simulation (DMS).   
 &nbsp;&nbsp;&nbsp;&nbsp;Through ‘www.tjigem.com’ or ‘https://www.tjigem.com’, we can enter the Home page of the project.  
-&nbsp;&nbsp;&nbsp;&nbsp;On this page, users can get our project’s leading content and this manual (Handbook) of the software. At the same time, they can enter the three functional pages by clicking the navigation card. If you want to get more details, read handbook.pdf please!  
+&nbsp;&nbsp;&nbsp;&nbsp;On this page, users can get our project’s leading content and this manual (Handbook) of the software. At the same time, they can enter the three functional pages by clicking the navigation card. If you want to get more details, read [handbook.pdf](https://github.com/igemsoftware2020/Synthesis_Navigator/blob/master/handbook.pdf) please!  
 &nbsp;&nbsp;&nbsp;&nbsp;try 'www.tjigem.com/database', 'www.tjigem.com/pf', 'www.tjigem.com/hms' to enter the functional pages.  
   
 ## 3. How to build this project in your computer
